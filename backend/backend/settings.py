@@ -7,9 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'default')
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['51.250.23.130', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['51.250.23.130', '127.0.0.1', 'localhost','taski.hopto.org']
 
 
 # Application definition
@@ -76,20 +76,19 @@ DATABASES = {
 
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    
+        'NAME': os.getenv('NAME_SIMULARITYVALIDATOR',''),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': os.getenv('NAME_LENGTHVALIDATOR',''),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': os.getenv('NAME_COMMONVALIDATOR',''),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': os.getenv('NAME_NUMERICVALIDATOR',''),
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
