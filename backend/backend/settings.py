@@ -9,7 +9,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'default')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['51.250.23.130', '127.0.0.1', 'localhost','taski.hopto.org']
+ALLOWED_HOSTS = ['51.250.23.130', '127.0.0.1', 'localhost', 'taski.hopto.org']
 
 
 # Application definition
@@ -77,16 +77,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': os.getenv('NAME_SIMULARITYVALIDATOR',''),
+        'NAME': os.getenv('NAME_SIMULARITYVALIDATOR', ''),
     },
     {
-        'NAME': os.getenv('NAME_LENGTHVALIDATOR',''),
+        'NAME': os.getenv('NAME_LENGTHVALIDATOR', ''),
     },
     {
-        'NAME': os.getenv('NAME_COMMONVALIDATOR',''),
+        'NAME': os.getenv('NAME_COMMONVALIDATOR', ''),
     },
     {
-        'NAME': os.getenv('NAME_NUMERICVALIDATOR',''),
+        'NAME': os.getenv('NAME_NUMERICVALIDATOR', ''),
     },
 ]
 
