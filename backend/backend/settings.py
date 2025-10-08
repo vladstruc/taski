@@ -76,7 +76,7 @@ DATABASES = {
 
 
 AUTH_PASSWORD_VALIDATORS = [
-    
+    {
         'NAME': os.getenv('NAME_SIMULARITYVALIDATOR',''),
     },
     {
